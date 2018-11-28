@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Rest - Cafe and Restaurant Website CMS</title>
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+	<script src="assets/js/google-code-prettify/prettify.js"></script>
+
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#EFEFEF;color:#1C140D;}
+		::-moz-selection{background:#CBE86B;color:#1C140D;}
+		::selection{background:#CBE86B;color:#1C140D;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#889C48;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #CBE86B, #889C48);
+			  background-image: -ms-linear-gradient(top, #CBE86B, #889C48);
+			  background-image: -webkit-gradient(linear, 0 0, 0 CBE86B%, from(#F2E9E1), to(#889C48));
+			  background-image: -webkit-linear-gradient(top, #CBE86B, #889C48);
+			  background-image: -o-linear-gradient(top, #CBE86B, #889C48);
+			  background-image: linear-gradient(top, #CBE86B, #889C48);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CBE86B', endColorstr='#889C48', GradientType=0);
+			  border-color: #889C48 #889C48 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #CBE86B #CBE86B #bfbfbf;
+		  background-color: #889C48;
+		}
+		hr{border-top:1px solid #CCCCCC;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#F2E9E1;color:#1C140D;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #FFF6ED;-moz-text-shadow:1px 1px 0px #FFF6ED;text-shadow:1px 1px 0px #FFF6ED;}
+		#documenter_sidebar ul{border-top:1px solid #D1C9C2;}
+		#documenter_sidebar ul a{border-top:1px solid #FFF6ED;border-bottom:1px solid #D1C9C2;color:#1C140D;}
+		#documenter_sidebar ul a:hover{background:#CBE86B;color:#1C140D;border-top:1px solid #CBE86B;}
+		#documenter_sidebar ul a.current{background:#CBE86B;color:#1C140D;border-top:1px solid #CBE86B;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+		
+		.pp1 {
+			padding: 3px 8px;
+			background-color: rgb(255, 236, 236);
+			display: inline;
+			font-weight: bold;
+		}
+	</style>
+	
+</head>
+<body class="documenter-project-carland">
+	<div id="documenter_sidebar">
+		<a href="index.php" id="documenter_logo">
+			<img src="assets/images/logo.png" alt="">
+		</a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#Welcome">Welcome</a></li>				
+<li><a href="#Introduction" title="Introduction">Introduction</a></li>
+<li><a href="#Features" title="Features">Features</a></li>
+<li><a href="#Requirements" title="Requirements">Requirements</a></li>
+<li><a href="#Installation" title="Installation">Installation</a></li>
+<li><a href="#Language_setup" title="Language Setup">Language Setup</a></li>
+
+<li><a href="#Dashboard" title="Dashboard">Dashboard</a></li>
+<li><a href="#Profile_info" title="Profile Info">Profile Information</a></li>
+<li><a href="#User" title="User">User</a></li>
+<li><a href="#Settings" title="Settings">Settings</a></li>
+<li><a href="#Settings_email" title="Settings Email">Settings - Email</a></li>
+<li><a href="#Settings_news" title="Settings News">Settings - News</a></li>
+<li><a href="#Settings_home_meta" title="Settings Home Meta">Settings - Home Meta</a></li>
+<li><a href="#Settings_home_section" title="Settings Home Section">Settings - Home Sections</a></li>
+<li><a href="#Settings_color" title="Settings Color">Settings - Color</a></li>
+<li><a href="#Settings_reservation" title="Settings Reservation">Settings - Reservation</a></li>
+<li><a href="#Page" title="Page">Page</a></li>
+<li><a href="#Menu_main" title="Menu Main">Main Menu</a></li>
+<li><a href="#Menu_footer" title="Menu Footer">Footer Menu</a></li>
+
+<li><a href="#Food_menu_category" title="Food Menu Category">Food Menu Category</a></li>
+<li><a href="#Food_menu" title="Food Menu">Food Menu</a></li>
+
+<li><a href="#News_category" title="News Category">News Category</a></li>
+<li><a href="#News" title="News">News</a></li>
+<li><a href="#News_comment" title="Comment">Comment</a></li>
+
+<li><a href="#Chef_designation" title="Chef Designation">Chef Designation</a></li>
+<li><a href="#Chef" title="Chef">Chef</a></li>
+
+<li><a href="#Slider" title="Slider">Slider</a></li>
+<li><a href="#Testimonial" title="Testimonial">Testimonial</a></li>
+<li><a href="#Service" title="Service">Service</a></li>
+
+<li><a href="#FAQ_category" title="FAQ Category">FAQ Category</a></li>
+<li><a href="#FAQ" title="FAQ">FAQ</a></li>
+
+<li><a href="#Photo_gallery" title="Photo Gallery">Photo Gallery</a></li>
+
+<li><a href="#File_Upload" title="File Upload">File Upload</a></li>
+<li><a href="#Social_Media" title="Social Media">Social Media</a></li>
+<li><a href="#support" title="Support">Support</a></li>
+		</ul>
+	</div>
+	<div id="documenter_content">
+
+
+<section id="Welcome">
+	<h1>Rest</h1>
+	<h2>Cafe and Restaurant Website CMS</h2>
+	<div id="documenter_buttons">
+		
+	</div>
+	<hr>
+	<ul>
+		<li>Created: March 21, 2018</li>
+		<li>Author: xicia</li>
+		<li>PHP Version: 5.4 or more is needed</li>
+		<li>Framework: No framework is used</li>
+		<li>Server: Apache</li>
+		<li>Support Email: jbbr.1990@gmail.com</li>
+	</ul>
+	<p></p>
+</section>
+	
+<section id="Introduction">
+	<div class="page-header"><h3>Introduction</h3>
+	<p>
+		Rest is a responsive restaurant and cafe related Website Content Management System (CMS). This CMS is built completely with PHP and MySQL. It has a nice and attractive front end and back end interface that are really awesome and eyecatching. The back end has a lot of nice and maintainable features that are needed for a modern and professional website to handle the contents easily by client. Almost all kinds of changes are possible to do using the admin panel without having any kind or programming language knowledge. 
+	</p>
+	<p>
+		This CMS is built using the procedural php (with PDO feature) and without any framework. For this reason, it can be customized easily by most of the developers. This CMS is strong against SQL injection, XSS attack and CSRF vulnerabilities; and your website will be safe. Also in all pages, admin level security and invalid page url submission checking were done.
+	</p>
+</section>
+
+<section id="Features">
+	<div class="page-header"><h3>Features</h3>
+	<p>
+		This CMS script has the following features:
+	</p>
+	<ul>
+		<li>Easy and simple interface to use</li>
+		<li>Fully responsive for any kind of device</li>
+		<li>Powerful admin backend like WordPress</li>
+		<li>Clean coding with proper commenting</li>
+		<li>Secured coding against SQL injection, XSS attack and CSRF vulnerabilities</li>
+		<li>Direct access or invalid URL press stopped for each pages</li>
+		<li>Statistics of some data in dashboard</li>
+		<li>Multilevel user management</li>
+		<li>Multi language support</li>
+		<li>Theme color change option</li>
+		<li>Unlimited news category and post creation and management</li>
+		<li>Unlimited photo upload and management</li>
+		<li>Unlimited page creation and management</li>
+		<li>Unlimited main menu creation with dropdown</li>
+		<li>Unlimited footer menu creation</li>
+		<li>Unlimited chef creation and management</li>
+		<li>Unlimited service creation and management</li>
+		<li>Unlimited testimonial creation and management</li>
+		<li>Unlimited FAQ categories and item creation and management</li>
+		<li>Facebook comment section for each post</li>
+		<li>SEO meta data setup for each post, page and category</li>
+		<li>SEO friendly URL structure</li>
+		<li>Unlimited file uploading system</li>
+		<li>All major social media URL setup for top bar and sidebar</li>
+	</ul>
+</section>
+
+<section id="Requirements">
+	<div class="page-header"><h3>Requirements</h3>
+	<p>
+		Before starting to install our item, make sure you fulfill the following requirements:
+	</p>
+	<ol>
+			<li>For Local Server installation, you need to have <a href="http://www.apachefriends.org/en/xampp.html" target="_blank">XAMPP</a>, <a href="http://www.wampserver.com/en/" target="_blank">WAMP</a> or any apache server with PHP and MySQL. But, remember, we do not give guarantee to use our script in local server without problem (it will depend totally up on you.)</li>
+			<li>Mod Rewrite will have to be enabled if you want to get SEO friendly URL. Examples are given below:<br><br>
+If Mod Rewrite is not enabled, a page url will be like:
+<pre>
+http://www.yourwebsite.com/page.php?slug=about-us
+</pre>
+If Mod Rewrite is enabled, a page url will be like:
+<pre>
+http://www.yourwebsite.com/page/about-us
+</pre>
+			</li>
+			<li>You have use any live LINUX server to use our script without problem.</li>
+			<li>
+				Required PHP version in server >= 5.4.
+			</li>
+			<li>
+				PDO must be enabled in the server.
+			</li>
+
+		</ol>
+</section>
+
+<section id="Installation">
+	<div class="page-header"><h3>Installation</h3>
+	<p>
+		In order to install the CMS, please follow these steps:
+	</p>
+	<div class="gap-0"></div>
+	<ol>
+		<li>
+			Download the main zip file from Codecanyon and extract it. You will get total 3 folders in there: <b>database, documentation and upload</b>.
+		</li>
+		<li>
+			In the <b>upload</b> folder, you will get a zip file <b>cms.zip</b>.
+		</li>
+		<li>
+			Upload the <b>cms.zip</b> file into your server using FTP or Cpanel. Extract this and use. You can use our php script into root domain or subdomain.
+		</li>
+		<li>
+			Create mysql database using cpanel or your hosting provider's system. Then import the <b>xicia_rest.sql</b> file (you will get it in <b>database</b> folder) into your created database.
+		</li>
+		<li>
+			Now you will have to edit the configuration file. Into our <b>cms</b> folder, you will get a folder named <b>admin</b>.
+			<p>
+				<img src="assets/images/3.png" alt="" style="width: auto;max-width: 90%;">
+			</p>
+		</li>
+		<li>
+			Go to <b>admin > inc</b> folder and open up the <b>config.php</b> file with any text editor (for example: Notepad++).
+			<p>
+				<img src="assets/images/2.png" alt="" style="width: auto;max-width: 90%;">
+			</p>
+		</li>
+		<li>
+			Into the <b>config.php</b> file you will get the important information. If you do not setup this correctly, the script will not work. Change the marked information like the image below.
+			<ul>
+				<li><b>Time Zone:</b> Write your proper timezone here</li>
+				<li><b>Host Name:</b> This is your database host name or IP address</li>
+				<li><b>Database Name:</b> Create a database name in your host (localhost or webhost) and put name here</li>
+				<li><b>Database Username:</b> Username of the database you created </li>
+				<li><b>Database Password:</b> Password of the database you created</li>
+				<li><b>BASE URL (OPTIONAL):</b> <br>
+				If you do not understand about BASE_URL setup, just keep the line as below:
+				<pre>define("BASE_URL", "");</pre>
+
+				If you are familier about base url and mod_rewrite mode, then follow these steps (if necessary):<br>
+
+				1. If you want to make all the URLs as SEO friendly URLs, you will have to use the .htaccess file that is coming with the script. Some server can make it hidden. So make sure that you have uploaded it correctly in your server. <br>
+				2. You will have to activate the mod_rewrite in your server and then setup the base url of your website like the following line:<br>
+				
+				<pre>define("BASE_URL", "http://yourwebsite.com/");</pre>
+				
+				</li>
+				<li>
+					<b>MOD REWRITE (OPTIONAL):</b><br>
+					You can make MOD_REWRITE "Off" or "On". But become careful. If you make this "On", you must have to setup BASE URL correctly (as described above). Otherwisre, the script will not work. <br>
+					<pre>define("MOD_REWRITE", "Off");</pre>
+				</li>
+			</ul>
+			<p>
+				<img src="assets/images/1.png" alt="" style="width: auto;max-width: 90%;">
+			</p>
+		</li>
+	</ol>
+</section>
+
+
+<section id="Language_setup">
+	<div class="page-header"><h3>Language Setup</h3>
+	<p>
+		The default language is "English" in this script. If you want to change it in your own language, please follow the steps below: 
+	</p>
+	<ul>
+		<li>
+			Go to <b>admin > languages</b> folder. You will get total 3 files. Those are <b>en.php, es.php and fr.php.</b><br>
+			<img src="assets/images/lang_1.png" alt="" style="width: auto;max-width: 90%;">
+		</li>
+		<li>
+			<b>en.php</b> means <b>English</b>. This is setup by default. <br>
+			<b>es.php</b> means <b>Spanish</b>. <br>
+			<b>fr.php</b> means <b>French</b>. <br>
+			We have setup these 3 languages in this script.
+		</li>
+		<li>
+			If you want to setup the language <b>Spanish</b> instead of <b>English</b>, then you have to call the <b>es.php</b> file instead of <b>en.php</b> file. In order to do this, open up the <b>header.php</b> file in the main root folder with a text editor. <br>
+			<img src="assets/images/lang_2.png" alt="" style="width: auto;max-width: 90%;">
+		</li>
+		<li>
+			After openning the file with a text editor you will see like this: <br>
+			<img src="assets/images/lang_3.png" alt="" style="width: auto;max-width: 90%;"><br>
+			Change the <b>en.php</b> with the desired language file name like <b>es.php</b> or <b>fr.php</b> and then save the file <b>header.php</b>.
+		</li>
+		<li>
+			If you want to setup any other language like Arabic or Dutch etc., you have to create a <b>*.php</b> file in the location: <b>admin > languages</b> like <b>ar.php</b>.
+		</li>
+		<li>
+			Then just copy code from <b>en.php</b> or <b>fr.php</b> and paste into the newly created <b>ar.php</b> file and save this file. Now you have to change the words for the new language in this file. (you can only copy codes when you will open the file with a text editor)
+		</li>
+		<li>
+			Suppose, you copied code from <b>fr.php</b> into <b>ar.php</b>. We are now explaining the codes.
+		</li>
+		<li>
+			In the new <b>ar.php</b> file, you will see codes like this when you will open the file with a text editor: <br>
+			<img src="assets/images/lang_4.png" alt="" style="width: auto;max-width: 90%;">
+		</li>
+		<li>
+			In the image, it is explained well how to change the codes. Please check that. 
+		</li>
+		<li>
+			After changing the codes, you have to save this file and the process is done.
+		</li>
+	</ul>
+</section>
+
+
+<section id="Dashboard">
+	<div class="page-header"><h3>Dashboard</h3>
+	<p>
+		In the dashboard, you will be able to get all the total data for users, categories, news, photos, chefs and food menus.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_1.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+<section id="Profile_info">
+	<div class="page-header"><h3>Profile Information</h3>
+	<p>
+		From the top right corner menu, any user can change his profile information, password etc.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_27.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="User">
+	<div class="page-header"><h3>User</h3>
+	<p>
+		Super admin can add unlimited number of <b>Admin</b> users in this script. Here user's email address will be treated as username in this website. User can be setup as active, edit or delete.
+	</p>
+	<p>
+		<b>Admin</b> can do almost everything of this website, except removing <b>Super Admin</b> and managing other <b>Admin</b> users.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_2.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="Settings">
+	<div class="page-header"><h3>Settings</h3>
+	<p>
+		In this cms, you can change the following things in the settings:
+	</p>
+	<ul>
+		<li><b>Logo</b> - You can change the website's logo here</li>
+		<li><b>Favicon</b> - You can change the website's favicon icon here. As an icon you can upload a photo.</li>
+		<li><b>General Content</b> - About us text (footer), copyright text, contact address, contact email, contact phone, contact fax, contact map iframe code</li>
+		<li><b>Email Settings</b> - Contact form and reservation form email address and message settings</li>
+		<li><b>News</b> - How many recent and popular news in footer and sidebar</li>
+		<li><b>Home Page Meta Information</b> - Meta Title, Meta Keywords and Meta Description</li>
+		<li><b>Home Page Sections On and Off</b> - Service, About, Food Menu, Testimonial and Chef Section</li>
+	</ul>
+	<p>
+		<img src="assets/images/Screenshot_3.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="Settings_email">
+	<div class="page-header"><h3>Settings - Email</h3>
+	<p>
+		In the email settings section, you will be able to setup email address, email subject and email sending thank you message for the contact form and the reservation form.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_4.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+<section id="Settings_news">
+	<div class="page-header"><h3>Settings - News</h3>
+	<p>
+		In the news settings section, you will be able to setup how many recent and popular news will be shown in the footer and sidebar sections.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_5.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+<section id="Settings_home_meta">
+	<div class="page-header"><h3>Settings - Home Page Meta</h3>
+	<p>
+		In the home meta settings section, you will be able to setup Meta Title, Meta Keywords and Meta Description for the website's home page.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_6.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+<section id="Settings_home_section">
+	<div class="page-header"><h3>Settings - Home Page Sections</h3>
+	<p>
+		In the home page settings section, you will be able to setup the following things:
+	</p>
+	<ul>
+		<li><b>Service Section</b> - You can make this section on or off in home page</li>
+		<li><b>About Section</b> - You can make this section on or off in home page. Also you can setup about section title, subtitle, contact, photo for home page.</li>
+		<li><b>Food Menu Section</b> - You can make this section on or off in home page. Also you can setup food menu section title and subtitle for home page.</li>
+		<li><b>Testimonial Section</b> - You can make this section on or off in home page</li>
+		<li><b>Chef Section</b> - You can make this section on or off in home page. Also you can setup chef section title and subtitle for home page.</li>
+	</ul>
+	<p>
+		<img src="assets/images/Screenshot_7.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+<section id="Settings_color">
+	<div class="page-header"><h3>Settings - Theme Color</h3>
+	<p>
+		In the theme color section, you will be able to change the website's primary and secondary color. So the theme color will be changed that way.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_8.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+<section id="Settings_reservation">
+	<div class="page-header"><h3>Settings - Reservation</h3>
+	<p>
+		In the reservation section, you will be able to setup the reservation text, button text, button url and reservation active/inactive for the bottom section (above footer) of the website.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_28.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="Page">
+	<div class="page-header"><h3>Page</h3>
+	<p>
+		When you will try to add a new page, you will have to give <b>page name, page slug, page layout, page content, banner photo, active status, seo data (meta title, keyword and description)</b>. 
+	</p>
+	<p>
+		<b>Page name</b> and <b>banner</b> are mandatory fields.
+	</p>
+	<p>
+		You can add, edit, view and delete pages any time from the admin panel.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_9.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="Menu_main">
+	<div class="page-header"><h3>Main Menu</h3>
+	<p>
+		You can add category item, page item, or any other manual link as the main menu in this cms. When you will add category or page item as your menu item, select the desired category or page from the dropdown, then give them a order and select the parent for them. If you want to setup that menu as top level menu item, select <b>No Parent</b> option from the dropdown, otherwise select another menu as parent. In <b>Other Menu</b> section, you can setup an external link or manual link and name as menu item. In this case, you will get an extra <b>URL</b> field to put url manually.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_10.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+<section id="Menu_footer">
+	<div class="page-header"><h3>Footer Menu</h3>
+	<p>
+		You can add category item, page item, or any other manual link as the footer menu in this cms. When you will add category or page item as your menu item, select the desired category or page from the dropdown, then give them a order for them. In <b>Other Menu</b> section, you can setup an external link or manual link and name as menu item. In this case, you will get an extra <b>URL</b> field to put url manually.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_11.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+<section id="Food_menu_category">
+	<div class="page-header"><h3>Food Menu Category</h3>
+	<p>
+		When you will try to add a new food menu category, you will have to give <b>category name</b> and <b>Caegory Order</b>. 
+	</p>
+	<p>
+		<b>Category name</b> is mandatory field.
+	</p>
+	<p>
+		You can add, edit, view and delete food menu categories any time from the admin panel.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_12.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+<section id="Food_menu">
+	<div class="page-header"><h3>Food Menu</h3>
+	<p>
+		When you will try to add a new food menu, you will have to give <b>Food menu name, Food menu description, Food menu price, Featured photo, Order</b> and <b>Food menu caegory</b>. 
+	</p>
+	<p>
+		<b>Food menu name, Food menu description, Food menu price, Food menu category</b> are mandatory fields.
+	</p>
+	<p>
+		You can add, edit, view and delete food menu any time from the admin panel.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_13.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="News_category">
+	<div class="page-header"><h3>News Category</h3>
+	<p>
+		When you will try to add a news category, you will have to give <b>category name, Category slug</b> and <b>SEO information (meta title, keyword and description)</b>. 
+	</p>
+	<p>
+		<b>Category name</b> is mandatory field.
+	</p>
+	<p>
+		You can add, edit, view and delete news categories any time from the admin panel.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_14.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="News">
+	<div class="page-header"><h3>News</h3>
+	<p>
+		When you will try to add a news item, you will have to give <b>News title, News slug, News content, News short content, News date, Featured photo, News category, Publisher</b> and <b>SEO information (meta title, keyword and description)</b>. 
+	</p>
+	<p>
+		<b>News title, News content, News short content, News date, News category</b> are mandatory fields.
+	</p>
+	<p>
+		You can add, edit, view and delete news item any time from the admin panel.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_15.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="News_comment">
+	<div class="page-header"><h3>Comment</h3>
+	<p>
+		Go to the facebook developer section (<a href="https://developers.facebook.com/docs/plugins/comments/">https://developers.facebook.com/docs/plugins/comments/</a>) to get your comment codes. Then just place it in the marked textarea and update it.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_16.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="Chef_designation">
+	<div class="page-header"><h3>Chef Designation</h3>
+	<p>
+		When you will try to add a new designation, you will have to give <b>Designation name</b>. 
+	</p>
+	<p>
+		<b>Designation name</b> is mandatory field.
+	</p>
+	<p>
+		You can add, edit, view and delete designation any time from the admin panel.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_17.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="Chef">
+	<div class="page-header"><h3>Chef</h3>
+	<p>
+		When you will try to add a new chef, you will have to give <b>Chef name, Chef slug, Designation, Photo, Banner, Details, Social Media IDs, Phone, Email, Website, Order, Active Status, SEO Information (meta title, keyword and description)</b>. 
+	</p>
+	<p>
+		<b>Chef name, Chef designation, Photo, Banner</b> are mandatory fields.
+	</p>
+	<p>
+		You can add, edit, view and delete chef any time from the admin panel.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_18.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="Slider">
+	<div class="page-header"><h3>Slider</h3>
+	<p>
+		When you will try to add a new slider item, you will have to give <b>Photo, heading, content, button text, button url, order, active status</b>. 
+	</p>
+	<p>
+		<b>Slider Photo</b> is mandatory field.
+	</p>
+	<p>
+		You can add, edit, view and delete slider any time from the admin panel.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_19.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+<section id="Testimonial">
+	<div class="page-header"><h3>Testimonial</h3>
+	<p>
+		When you will try to add a new testimonial item, you will have to give <b>Name, designation, company, photo, comment, order</b>. 
+	</p>
+	<p>
+		<b>Name, designation, company, photo, comment</b> are mandatory fields.
+	</p>
+	<p>
+		You can add, edit, view and delete testimonial any time from the admin panel.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_20.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+<section id="Service">
+	<div class="page-header"><h3>Service</h3>
+	<p>
+		When you will try to add a new service item, you will have to give <b>Name, description, featured photo, order, show on home option</b>. 
+	</p>
+	<p>
+		<b>Name, description, featured photo, show on home option</b> are mandatory fields.
+	</p>
+	<p>
+		You can add, edit, view and delete service any time from the admin panel.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_21.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="FAQ_category">
+	<div class="page-header"><h3>FAQ Category</h3>
+	<p>
+		When you will try to add a new FAQ category, you will have to give <b>FAQ category name</b>. 
+	</p>
+	<p>
+		<b>FAQ Category name</b> is mandatory field.
+	</p>
+	<p>
+		You can add, edit, view and delete FAQ categories any time from the admin panel.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_22.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="FAQ">
+	<div class="page-header"><h3>FAQ</h3>
+	<p>
+		When you will try to add a new FAQ item, you will have to give <b>FAQ title, FAQ content, FAQ category</b>. 
+	</p>
+	<p>
+		<b>FAQ title, FAQ content, FAQ category</b> are mandatory fields.
+	</p>
+	<p>
+		You can add, edit, view and delete FAQ any time from the admin panel.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_23.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="Photo_gallery">
+	<div class="page-header"><h3>Photo Gallery</h3>
+	<p>
+		When you will try to add a new photo in gallery, you will have to give <b>Photo caption, Photo</b>. 
+	</p>
+	<p>
+		<b>Photo caption, Photo</b> are mandatory fields.
+	</p>
+	<p>
+		You can add, edit, view and delete photos any time from the admin panel.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_24.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="File_Upload">
+	<div class="page-header"><h3>File Upload</h3>
+	<p>
+		When you will try to add a file, you will have to give <b>File title or name, File</b>. 
+	</p>
+	<p>
+		<b>File title or name, File</b> are mandatory fields.
+	</p>
+	<p>
+		Upload your desired file. Only these files are allowed: jpg, jpeg, gif, png, pdf, doc, docx, ppt, pptx, xls, xlsx, zip, rar.
+	</p>
+	<p>
+		You can add, edit, view and delete files any time from the admin panel.
+	</p>
+	<p>
+		These files can be used anywhere via a text editor for a page.
+	</p>
+	<p>
+		<img src="assets/images/Screenshot_25.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="Social_Media">
+	<div class="page-header"><h3>Social Media</h3>
+	<p>
+		This CMS supports to use total 16 social media to show as icon in the website. For each item, you will get to put a URL section. If you keep any URL field blank, that will not be shown in the website. The social media list is given below: 
+	</p>
+	<ol>
+		<li>Facebook</li>
+		<li>Twitter</li>
+		<li>LinkedIn</li>
+		<li>Google Plus</li>
+		<li>Pinterest</li>
+		<li>YouTube</li>
+		<li>Instagram</li>
+		<li>Tumblr</li>
+		<li>Flickr</li>
+		<li>Reddit</li>
+		<li>Snapchat</li>
+		<li>WhatsApp</li>
+		<li>Quora</li>
+		<li>StumbleUpon</li>
+		<li>Delicious</li>
+		<li>Digg</li>
+	</ol>
+	<p>
+		<img src="assets/images/Screenshot_26.png" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="support">
+	<div class="page-header"><h3>Support</h3>
+	<h4>Support Process (if support is on)</h4>
+	<div class="gap-10"></div>
+	<ol>
+		<li>
+			First look at the navigation menu on the left side of the documentation. You will get all important topics here. 
+		</li>
+		<li>
+			Search the entire document pressing "ctrl+F", enter your query string and press "Search".
+		</li>
+		<li>
+			If you still do not get the answer of your question, then contact us via codecanyon and always give your live URL when asking for help.
+		</li>
+		<li>
+			When asking for help, please provide the details and also give some screenshots if possible.
+		</li>
+	</ol>
+	<div class="gap-0"></div>
+	<h4>Why we do not give support through codecanyon comment section?</h4>
+	<div class="gap-10"></div>
+	<ol>
+		<li>
+			Do not ask for support in the comment section of codecanyon. Because our codecanyon account access is restricted and support team will not be able to reply. 
+		</li>
+		<li>
+			It is tough to track the communication in this way.	
+		</li>
+		<li>
+			We think, it is not wise to show eveyone your website's URL and other sensitive information.
+		</li>
+	</ol>
+	<div class="gap-0"></div>
+	<h4>Support Hours and Time</h4>
+	<p>
+		We generally work for 18 hours a day and 7 days in a week. So you will get very prompt answer always from us within 24-48 hours except the marked holidays.
+	</p>	
+	<div class="gap-0"></div>
+	<h4>Advanced or Modification Support</h4>
+	<p>
+		If you request us help, which only needs us to write a couple lines of code, we will assist you in that. But if your query requires to write a lot of codes to be published, we can only provide you guidance and you need to hire a developer if you don't have that skills to implement it yourself.
+	</p>
+	<div class="gap-0"></div>
+	<h4>Bug Fixing</h4>
+	<p>
+		We promise to solve all the bugs as quickly as possible within 24-48 hours after those are brought to our attention.
+	</p>
+</section>
+
+
+
+	</div>
+</body>
+</html>
